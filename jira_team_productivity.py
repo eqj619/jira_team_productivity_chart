@@ -3,6 +3,7 @@ from requests.auth import HTTPBasicAuth
 import json
 import pandas as pd
 import datetime
+import openpyxl
 
 #
 # Get the number of refult of search with filter
@@ -55,6 +56,12 @@ def createDaysList(daysList, monthList):
             monthList.append(firstday.strftime("%Y-%m"))
 
 # main
+import time
+from datetime import date
+
+wb = openpyxl.load_workbook("jira_team_productivity_template.xlsx")
+ws = wb.active
+
 daysList = []
 monthList = []
 createDaysList(daysList, monthList)
@@ -65,13 +72,22 @@ json_load = json.load(json_open)
 tf = jiraTrendFilter(json_load['jiraAccess'])
 
 projectName = json_load['input']['project']
+i = 0
 for day in daysList:
     f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task) AND created >= ' \
         + day[0] +  ' AND created <= ' + day[1]
-    createdTickets = tf.GetNumOfJiraFilter(f)
-    print(createdTickets, " >>> ", f)
+    ws.cell(row = i+2, column = 2).value = tf.GetNumOfJiraFilter(f)
+    print(" >>> ", f)
 
     f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task) AND resolved >= ' \
         + day[0] +  ' AND resolved <= ' + day[1]
-    createdTickets = tf.GetNumOfJiraFilter(f)
-    print(createdTickets, " >>> ", f)
+    ws.cell(row = i+2, column = 4).value = tf.GetNumOfJiraFilter(f)
+    print(" >>> ", f)
+    i += 1
+
+i = 0
+for ym in monthList:
+    ws.cell(row = i+2, column = 1).value = ym
+    i += 1
+
+wb.save("jira_" + projectName + "-team_performance-" + date.today().strftime("%Y-%m-%d") + ".xlsx")
