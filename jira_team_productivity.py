@@ -58,16 +58,28 @@ def createDaysList(daysList, monthList):
 # main
 import time
 from datetime import date
+import sys
 
-wb = openpyxl.load_workbook("jira_team_productivity_template.xlsx")
-ws = wb.active
+try:
+    wb = openpyxl.load_workbook("jira_team_productivity_template.xlsx")
+    ws = wb.active
+except:
+    print("error: miss jira_team_productivity_template.xlsx in this directory")
+    exit(0)
 
 daysList = []
 monthList = []
 createDaysList(daysList, monthList)
 
-json_open = open('jira_filter.json', 'r')
-json_load = json.load(json_open)
+try:
+    args = sys.argv
+    json_open = open(args[1], 'r')
+    json_load = json.load(json_open)
+except:
+    print("error: miss json file")
+    print("usage: python3 jira_team_productivity.py <json file>")
+    wb.close()
+    exit(0)
 
 tf = jiraTrendFilter(json_load['jiraAccess'])
 
