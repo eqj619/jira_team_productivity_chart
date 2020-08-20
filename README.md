@@ -9,18 +9,16 @@ import
   pandas
   openpyxl
 
-<code>
-  input json file format
-  {
-        "jiraAccess":{
-            "url":"https://own jira url.atlassian.net/rest/api/2/search",
-            "user":"your jira username",
-            "key":"your jira access token"
-        },
+input json file format
+<code>{
+      "jiraAccess":{
+          "url":"https://own jira url.atlassian.net/rest/api/2/search",
+          "user":"your jira username",
+          "key":"your jira access token"
+      },
 
-        "input":{
-            "project":"list of JIRA short project name",
-            "startWeek":"2019-12-30" ... not use for this scrypt
-        }
-  }
-</code>
+      "input":{
+          "project":"list of JIRA short project name",
+          "startWeek":"2019-12-30" ... not use for this scrypt
+      }
+}</code>
