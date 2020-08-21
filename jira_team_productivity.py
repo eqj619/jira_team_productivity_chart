@@ -71,5 +71,5 @@ for ym in monthList:
     ws.cell(row = i+2, column = 1).value = ym
     i += 1
 
-wb.save("jira_" + projectName + "-team_performance-" + date.today().strftime("%Y-%m-%d") + ".xlsx")
+wb.save("jira_" + projectName.replace(",","").replace(" ", "-") + "-team_performance-" + date.today().strftime("%Y-%m-%d") + ".xlsx")
 wb.close()

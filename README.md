@@ -1,18 +1,22 @@
 # jira_team_productivity_chart
-Retrieve the number of resolved tickets at interest JIRA project. 
-then, fill these numbers into excel template file "jira_team_productivity_template.xlsx"
-to plot trend line chart to see team performance in 12 month time range.
+This is python3 script which create team KPI from JIRA.
+Retrieve the number of resolved tickets at target project in JIRA
+
+usage:
+$ python3 jira_team_productivity.py <json file>
 
 python version 3.7
-import
-  requests
-  pandas
-  openpyxl
+
+files:
+jira_team_productivity.py  ... main script file
+jiralibrary.py             ... library file
+jira_team_productivity_template.xlsx ... an excel template file
+jira_filter_template.json   ... json input file, jira_filter_template
 
 input json file format
 
 <code>{
-  
+
       "jiraAccess":{
           "url":"https://own jira url.atlassian.net/rest/api/2/search",
           "user":"your jira username",
@@ -24,3 +28,6 @@ input json file format
           "startWeek":"2019-12-30" ... not use for this scrypt
       }
 }</code>
+
+output:
+Fill team KPI information and Line chart into an excel file.
