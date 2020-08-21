@@ -21,7 +21,7 @@ input json file format
 
       {
             "jiraAccess":{
-                "url":"https://own jira url.atlassian.net/rest/api/2/search",
+                "url":"https://<own_jira_url>.atlassian.net/rest/api/2/search",
                 "user":"your jira username",
                 "key":"your jira access token"
             },
