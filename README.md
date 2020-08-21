@@ -19,19 +19,19 @@ files:
 
 input json file format
 
-<code>{
+      {
+            "jiraAccess":{
+                "url":"https://own jira url.atlassian.net/rest/api/2/search",
+                "user":"your jira username",
+                "key":"your jira access token"
+            },
 
-      "jiraAccess":{
-          "url":"https://own jira url.atlassian.net/rest/api/2/search",
-          "user":"your jira username",
-          "key":"your jira access token"
-      },
-
-      "input":{
-          "project":"list of JIRA short project name",
-          "startWeek":"2019-12-30" ... not use for this scrypt
+            "input":{
+                "project":"list of JIRA short project name",
+                "startWeek":"2019-12-30" ... not use for this scrypt
+            }
       }
-}</code>
 
 output:
+
 Fill team KPI information and Line chart into an excel file.
