@@ -3,15 +3,18 @@ This is python3 script which create team KPI from JIRA.
 Retrieve the number of resolved tickets at target project in JIRA
 
 usage:
+
 <code>$ python3 jira_team_productivity.py <json file> </code>
 
 python version 3.7
+
 
 files:
       jira_team_productivity.py  ... main script file
       jiralibrary.py             ... library file
       jira_team_productivity_template.xlsx ... an excel template file
       jira_filter_template.json   ... json input file, jira_filter_template
+
 
 input json file format
 
