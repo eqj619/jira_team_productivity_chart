@@ -32,6 +32,9 @@ input json file format
             }
       }
 
+note:
+https://confluence.atlassian.com/cloud/api-tokens-938839638.html
+
 output:
 
 Fill team KPI information and Line chart into an excel file.
