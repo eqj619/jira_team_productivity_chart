@@ -1,6 +1,6 @@
 # jira_team_productivity_chart
 This is python3 script which create team KPI from JIRA.
-Retrieve the number of resolved tickets at target project in JIRA
+Retrieve the number of resolved tickets at target project in JIRA to see team KPI per 12 month time range.
 
 usage:
 
