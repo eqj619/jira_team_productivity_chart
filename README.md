@@ -35,7 +35,7 @@ Input json file format
             },
 
             "input":{
-                "project":"list of JIRA short project name",
+                "project":"GDP, CLI, SVR", ... list of JIRA short project name
                 "startWeek":"2019-12-30" ... not use for this scrypt
             }
       }
