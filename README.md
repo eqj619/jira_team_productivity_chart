@@ -2,20 +2,22 @@
 This is python3 script which create team KPI from JIRA.
 Retrieve the number of resolved tickets at target project in JIRA to see team KPI per 12 month time range.
 
-usage:
+Usage:
 
 <code>$ python3 jira_team_productivity.py <json file> </code>
 
-tested python version
+Tested python version
 
-      #3.7.7
-      #3.8.5
+      3.7.7
+      3.8.5
+
+Required module:
 
       $pip3 install pandas
       $pip3 install openpyxl
       $pip3 requests
 
-files:
+Files:
 
       jira_team_productivity.py  ... main script file
       jiralibrary.py             ... library file
@@ -23,7 +25,7 @@ files:
       jira_filter_template.json   ... json input file, jira_filter_template
 
 
-input json file format
+Input json file format
 
       {
             "jiraAccess":{
@@ -39,6 +41,7 @@ input json file format
       }
 
 note:
+
 https://confluence.atlassian.com/cloud/api-tokens-938839638.html
 
 output:
