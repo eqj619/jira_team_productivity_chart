@@ -32,5 +32,5 @@ class DoFilter:
            params = query,
            auth = self.auth
         )
-        df = pd.read_json(response.text)
-        return(len(df))
+        json_load = json.loads(response.text)
+        return(json_load ['total'])
