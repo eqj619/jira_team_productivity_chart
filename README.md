@@ -1,18 +1,23 @@
 # jira_team_productivity_chart
 This is python3 script which create team KPI from JIRA.
-Retrieve the number of resolved tickets at target project in JIRA
+Retrieve the number of resolved tickets at target project in JIRA to see team KPI per 12 month time range.
 
-usage:
+Usage:
 
-<code>$ python3 jira_team_productivity.py <json file> </code>
+<code>$ python3 jira_team_productivity.py jsonInpufile </code>
 
-python version 3.7
+Tested python version
+
+      3.7.7
+      3.8.5
+
+Required module:
 
       $pip3 install pandas
       $pip3 install openpyxl
       $pip3 requests
 
-files:
+Files:
 
       jira_team_productivity.py  ... main script file
       jiralibrary.py             ... library file
@@ -20,22 +25,23 @@ files:
       jira_filter_template.json   ... json input file, jira_filter_template
 
 
-input json file format
+Input json file format
 
       {
             "jiraAccess":{
                 "url":"https://<own_jira_url>.atlassian.net/rest/api/2/search",
                 "user":"your jira username",
-                "key":"your jira access token"
+                "key":"your jira api token"
             },
 
             "input":{
-                "project":"list of JIRA short project name",
+                "project":"GDP, CLI, SVR", ... list of JIRA short project name
                 "startWeek":"2019-12-30" ... not use for this scrypt
             }
       }
 
 note:
+
 https://confluence.atlassian.com/cloud/api-tokens-938839638.html
 
 output:
