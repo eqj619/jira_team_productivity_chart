@@ -1,12 +1,12 @@
 {
       "jiraAccess":{
           "url":"https://ABCDE.atlassian.net/rest/api/2/search",
-          "user":"your@username.com",
+          "user":"your@username.com ... jira user account",
           "key":"your jira token"
       },
 
       "input":{
-          "project":"Jira target project short name",
+          "project":"GDP ... Jira target project short name",
           "startWeek":"2019-12-30 use for create/resolve chart"
       }
 }
