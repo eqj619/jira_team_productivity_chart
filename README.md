@@ -4,7 +4,7 @@ Retrieve the number of resolved tickets at target project in JIRA to see team KP
 
 Usage:
 
-<code>$ python3 jira_team_productivity.py <json file> </code>
+<code>$ python3 jira_team_productivity.py jsonInpufile </code>
 
 Tested python version
 
