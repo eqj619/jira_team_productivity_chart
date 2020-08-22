@@ -23,7 +23,8 @@ class DoFilter:
     def GetNumOfJiraFilter(self, filter):
         query = {
            #'jql': 'project = GDP AND issuetype in (Epic, Story, Task) AND created >= 2020-07-01 AND created <= 2020-07-31'
-           'jql': filter
+           'jql': filter,
+           "maxResults": 1000
         }
         response = requests.request(
            "GET",
@@ -33,4 +34,6 @@ class DoFilter:
            auth = self.auth
         )
         json_load = json.loads(response.text)
+        if(json_load['total'] >= json_load['maxResults']):
+            print("CUATION tatal:",json_load ['total'], " reached ", json_load['maxResults'])
         return(json_load ['total'])

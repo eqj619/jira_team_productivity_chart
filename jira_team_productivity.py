@@ -55,12 +55,12 @@ jf = jlib.DoFilter(json_load['jiraAccess'])
 projectName = json_load['input']['project']
 i = 0
 for day in daysList:
-    f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task) AND created >= ' \
+    f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task, Sub-task) AND created >= ' \
         + day[0] +  ' AND created <= ' + day[1]
     ws.cell(row = i+2, column = 2).value = jf.GetNumOfJiraFilter(f)
     print(" >>> ", f)
 
-    f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task) AND resolved >= ' \
+    f = 'project in (' + projectName + ') AND issuetype in (Epic, Story, Task, Sub-task) AND resolved >= ' \
         + day[0] +  ' AND resolved <= ' + day[1]
     ws.cell(row = i+2, column = 4).value = jf.GetNumOfJiraFilter(f)
     print(" >>> ", f)
