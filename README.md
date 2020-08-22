@@ -6,8 +6,8 @@ usage:
 
 <code>$ python3 jira_team_productivity.py <json file> </code>
 
-python version 3.7.7
-python version 3.8.5
+python version 3.7.7</B>
+python version 3.8.5</B>
 
       $pip3 install pandas
       $pip3 install openpyxl
