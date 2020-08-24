@@ -20,7 +20,6 @@ Usage:
 
       Result, you can get updated excel file and be able to see the line chart and table in this excel file.
 
-
 Tested python version
 
       3.7.7
@@ -62,3 +61,5 @@ https://confluence.atlassian.com/cloud/api-tokens-938839638.html
 output:
 
 Fill team KPI information and Line chart into an excel file.
+
+      note: this script does not support fill out the head count at team(s). please input these number by manual, now.
