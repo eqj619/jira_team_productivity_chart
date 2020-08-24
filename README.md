@@ -18,7 +18,7 @@ Usage:
 
 <code>$ python3 jira_team_productivity.py jsonInpufile </code>
 
-Result, you can get updated excel file and be able to see the line chart and table in this excel file.
+      Result, you can get updated excel file and be able to see the line chart and table in this excel file.
 
 
 Tested python version
