@@ -6,9 +6,20 @@ ideally in case of 2 weeks sprint, a staff have 9 working days. so that, 2 days 
 manager is able to setup target number based on current team performance. then, address approach how to increase team KPI. Line chart created by this script show the monthly trend of annual resolved tickets.
 
 
+install:
+      
+      1. checkout this repository
+      2. modify json file for your JIRA project
+            JIRA URL
+            user name
+            jira Token
+            target project(s) names
 Usage:
 
 <code>$ python3 jira_team_productivity.py jsonInpufile </code>
+
+Result, you can get updated excel file and be able to see the line chart and table in this excel file.
+
 
 Tested python version
 
