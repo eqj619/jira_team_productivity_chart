@@ -6,41 +6,34 @@ ideally in case of 2 weeks sprint, a staff have 9 working days. so that, 2 days 
 manager is able to setup target number based on current team performance. then, address approach how to increase team KPI. Line chart created by this script show the monthly trend of annual resolved tickets.
 
 
-install:
-      
+## install:
       1. checkout this repository
       2. modify json file for your JIRA project
             JIRA URL
             user name
             jira Token
             target project(s) names
-Usage:
-
-<code>$ python3 jira_team_productivity.py jsonInpufile </code>
-
+## Usage:
+      $ python3 jira_team_productivity.py jsonInpufile
       Result, you can get updated excel file and be able to see the line chart and table in this excel file.
 
-Tested python version
-
+### Tested python version
       3.7.7
       3.8.5
 
-Required module:
-
+### Required module:
       $pip3 install pandas
       $pip3 install openpyxl
       $pip3 requests
 
-Files:
-
+### Files:
       jira_team_productivity.py  ... main script file
       jiralibrary.py             ... library file
       jira_team_productivity_template.xlsx ... an excel template file
       jira_filter_template.json   ... json input file, jira_filter_template
 
 
-Input json file format
-
+### Input json file format
       {
             "jiraAccess":{
                 "url":"https://<own_jira_url>.atlassian.net/rest/api/2/search",
@@ -54,12 +47,10 @@ Input json file format
             }
       }
 
-note:
+### note:
+      You can find how to get JIRA API token in this link.
+      https://confluence.atlassian.com/cloud/api-tokens-938839638.html
 
-https://confluence.atlassian.com/cloud/api-tokens-938839638.html
-
-output:
-
-Fill team KPI information and Line chart into an excel file.
-
+### output:
+      Fill team KPI information and Line chart into an excel file.
       note: this script does not support fill out the head count at team(s). please input these number by manual, now.
